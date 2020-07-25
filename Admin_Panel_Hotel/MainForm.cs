@@ -1,5 +1,6 @@
 ﻿using Admin_Panel_Hotel.Applications;
-using Admin_Panel_Hotel.Card;
+using Admin_Panel_Hotel.CardsFolder;
+using Admin_Panel_Hotel.CustomersFolder;
 using Admin_Panel_Hotel.Guest;
 using Admin_Panel_Hotel.Registry;
 using MySql.Data.MySqlClient;

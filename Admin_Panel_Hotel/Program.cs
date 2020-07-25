@@ -1,4 +1,4 @@
-﻿using Admin_Panel_Hotel.Customers;
+﻿using Admin_Panel_Hotel.CustomersFolder;
 using System;
 using System.Windows.Forms;
 

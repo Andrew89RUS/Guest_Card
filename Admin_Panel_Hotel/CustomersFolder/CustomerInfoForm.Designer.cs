@@ -1,4 +1,4 @@
-﻿namespace Admin_Panel_Hotel.Customers
+﻿namespace Admin_Panel_Hotel.CustomersFolder
 {
     partial class CustomerInfoForm
     {

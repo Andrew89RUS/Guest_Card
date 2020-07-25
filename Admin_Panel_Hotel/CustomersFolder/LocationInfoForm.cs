@@ -2,7 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
-namespace Admin_Panel_Hotel.Customers
+namespace Admin_Panel_Hotel.CustomersFolder
 {
     public partial class LocationInfoForm : Form
     {

@@ -1,9 +1,10 @@
 ﻿using Admin_Panel_Hotel.Applications;
+using Admin_Panel_Hotel.CustomersFolder;
 using MySql.Data.MySqlClient;
 using System;
 using System.Windows.Forms;
 
-namespace Admin_Panel_Hotel
+namespace Admin_Panel_Hotel.ApplicationsFolder
 {
     public partial class ShowCurrentApplication : Form
     {

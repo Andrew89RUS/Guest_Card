@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace Admin_Panel_Hotel.Applications
+namespace Admin_Panel_Hotel.ApplicationsFolder
 {
-    public partial class CurrentApplications : Form
+    public partial class HistoryApplications : Form
     {
-        public CurrentApplications()
+        public HistoryApplications()
         {
             InitializeComponent();
-            Functions.LoadApplications(ApplicationsDataGridView, 2);
+            Functions.LoadApplications(ApplicationsDataGridView, 4);
 
             CustomerComboBox.SelectedIndex = 0;
             LocationComboBox.SelectedIndex = 0;
@@ -18,10 +18,10 @@ namespace Admin_Panel_Hotel.Applications
         {
             if (e.ColumnIndex == 2)
             {
-                ShowCurrentApplication.CustomerName = ApplicationsDataGridView[0, e.RowIndex].Value.ToString();
-                ShowCurrentApplication.ApplicationDate = ApplicationsDataGridView[1, e.RowIndex].Value.ToString();
-                ShowCurrentApplication.ApplicationId = Convert.ToInt64(ApplicationsDataGridView[3, e.RowIndex].Value.ToString());
-                Functions.OpenChildForm(new ShowCurrentApplication(), MainForm.ContP);
+                ShowApplicationHistory.CustomerName = ApplicationsDataGridView[0, e.RowIndex].Value.ToString();
+                ShowApplicationHistory.ApplicationDate = ApplicationsDataGridView[1, e.RowIndex].Value.ToString();
+                ShowApplicationHistory.ApplicationId = Convert.ToInt64(ApplicationsDataGridView[3, e.RowIndex].Value.ToString());
+                Functions.OpenChildForm(new ShowApplicationHistory(), MainForm.ContP);
             }
         }
 
@@ -38,4 +38,3 @@ namespace Admin_Panel_Hotel.Applications
         }
     }
 }
-    

@@ -11,6 +11,8 @@
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -23,10 +25,8 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -102,14 +102,14 @@
     <Compile Include="Applications\CurrentApplications.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Applications\CurrentApplications.Designer.cs">
-      <DependentUpon>CurrentApplications.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Applications\HistoryApplications.cs">
+    <Compile Include="ApplicationsFolder\CurrentApplications.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Applications\HistoryApplications.Designer.cs">
-      <DependentUpon>HistoryApplications.cs</DependentUpon>
+    <Compile Include="ApplicationsFolder\DraftApplications.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ApplicationsFolder\HistoryApplications.cs">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Card.cs" />
     <Compile Include="Cards\AddCards.cs">
@@ -134,62 +134,45 @@
     <Compile Include="Customers\AddCustomer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customers\AddCustomer.Designer.cs">
-      <DependentUpon>AddCustomer.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Applications\AddApplication.cs">
+    <Compile Include="ApplicationsFolder\ShowHistoryApplication.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Applications\AddApplication.Designer.cs">
-      <DependentUpon>AddApplication.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Applications\DraftApplications.cs">
+    <Compile Include="ApplicationsFolder\ShowNewApplication.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Applications\DraftApplications.Designer.cs">
-      <DependentUpon>DraftApplications.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Customers\CustomerInfoForm.cs">
+    <Compile Include="Cards.cs" />
+    <Compile Include="CardsFolder\AddCards.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Customers\CustomerInfoForm.Designer.cs">
+    <Compile Include="CardsFolder\AddCards.Designer.cs">
+      <DependentUpon>AddCards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardsFolder\AllCards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CardsFolder\AllCards.Designer.cs">
+      <DependentUpon>AllCards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CardsFolder\MovingCards.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CardsFolder\MovingCards.Designer.cs">
+      <DependentUpon>MovingCards.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CustomersFolder\AddCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomersFolder\CustomersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomersFolder\LocationInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomersFolder\CustomerInfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomersFolder\CustomerInfoForm.Designer.cs">
       <DependentUpon>CustomerInfoForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Customers\LocationInfoForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Customers\LocationInfoForm.Designer.cs">
-      <DependentUpon>LocationInfoForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Applications\ShowHistoryApplication.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Applications\ShowHistoryApplication.Designer.cs">
-      <DependentUpon>ShowHistoryApplication.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Applications\ShowNewApplication.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Applications\ShowNewApplication.Designer.cs">
-      <DependentUpon>ShowNewApplication.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Applications\ShowDraftApplication.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Applications\ShowDraftApplication.Designer.cs">
-      <DependentUpon>ShowDraftApplication.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Applications\ShowCurrentApplication.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Applications\ShowCurrentApplication.Designer.cs">
-      <DependentUpon>ShowCurrentApplication.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Applications\InfoUserForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Applications\InfoUserForm.Designer.cs">
-      <DependentUpon>InfoUserForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Guests\CalendarGuest.cs">
       <SubType>Form</SubType>
@@ -241,18 +224,6 @@
       <DependentUpon>NotificationsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Functions.cs" />
-    <Compile Include="Applications\NewApplications.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Applications\NewApplications.Designer.cs">
-      <DependentUpon>NewApplications.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Customers\CustomersForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Customers\CustomersForm.Designer.cs">
-      <DependentUpon>CustomersForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -299,16 +270,7 @@
     <EmbeddedResource Include="Cards\MovingCards.resx">
       <DependentUpon>MovingCards.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Customers\AddCustomer.resx">
-      <DependentUpon>AddCustomer.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Applications\AddApplication.resx">
-      <DependentUpon>AddApplication.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Applications\DraftApplications.resx">
-      <DependentUpon>DraftApplications.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Customers\CustomerInfoForm.resx">
+    <EmbeddedResource Include="CustomersFolder\CustomerInfoForm.resx">
       <DependentUpon>CustomerInfoForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Customers\LocationInfoForm.resx">
@@ -349,12 +311,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NotificationsForm.resx">
       <DependentUpon>NotificationsForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Applications\NewApplications.resx">
-      <DependentUpon>NewApplications.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Customers\CustomersForm.resx">
-      <DependentUpon>CustomersForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>

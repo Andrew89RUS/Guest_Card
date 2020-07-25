@@ -1,10 +1,10 @@
-﻿using Admin_Panel_Hotel.Customers;
+﻿using Admin_Panel_Hotel.CustomersFolder;
 using MySql.Data.MySqlClient;
 using System;
 using System.Data;
 using System.Windows.Forms;
 
-namespace Admin_Panel_Hotel
+namespace Admin_Panel_Hotel.CustomersFolder
 {
     public partial class CustomersForm : Form
     {

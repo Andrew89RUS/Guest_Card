@@ -2,7 +2,7 @@
 using System;
 using System.Windows.Forms;
 
-namespace Admin_Panel_Hotel
+namespace Admin_Panel_Hotel.ApplicationsFolder
 {
     public partial class ShowApplicationNew : Form
     {
